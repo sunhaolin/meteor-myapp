@@ -1,8 +1,5 @@
-FROM gitpod/workspace-base:latest
+FROM gitpod/workspace-full
 
-USER root
-
-# Install Meteor
-RUN curl https://install.meteor.com/ | sh
-
+# Taken from https://github.com/meteor/todos/pull/275/files
 USER gitpod
+RUN cd /home/gitpod && curl https://install.meteor.com/ | sh

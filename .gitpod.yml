@@ -1,6 +1,14 @@
 image:
   file: .gitpod.Dockerfile
 
+tasks:
+- before: export ROOT_URL=$(gp url 3000)
+  init: meteor npm install
+  command: meteor
 ports:
-  - port: 10000-50000
-    onOpen: ignore
+- port: 3000
+  onOpen: open-preview
+- port: 3001 # mongo db
+  onOpen: ignore
+- port: 10000-50000
+  onOpen: ignore
