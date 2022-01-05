@@ -1,3 +1,6 @@
+image:
+  file: .gitpod.Dockerfile
+
 ports:
   - port: 10000-50000
     onOpen: ignore
